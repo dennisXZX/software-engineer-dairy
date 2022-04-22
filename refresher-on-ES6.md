@@ -68,3 +68,20 @@ const index = 1;
 obj[`topic${index}`] = "topic content";
 ```
 
+## Check if an input is empty
+
+Instead of
+
+```js
+if (value !== null && value !== undefined && value !== "") {
+  //...
+}
+```
+
+We can do
+
+```js
+if ((value ?? "") !== "") {
+  //...
+}
+```
